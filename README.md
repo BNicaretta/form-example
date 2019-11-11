@@ -1,3 +1,3 @@
 ## Form-Example
 
-A Simple Contact Form developed by Brian Nicaretta
+A simple contact form developed by Brian Nicaretta
