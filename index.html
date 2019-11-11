@@ -6,26 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Form Example</title>
   </head>
+  <style>
+      body {
+        font-family: 'Lato', sans-serif;
+        font-size: 100%;
+        margin: 2rem 10%;
+        background-color: lightblue;
+      }
+  
+      form {
+        display: grid;
+        justify-items: center;
+      }
+  </style>
   <body>
-    <form name="contact" method="POST" data-netlify="true">
-      <fieldset>
-          <legend>Contact Me</legend>
-        <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-            <label for="male">Male</label>
-            <input type="radio" name="gender" id="male" value="male"><br>
-            <label for="female">Female</label>
-            <input type="radio" name="gender" id="female" value="female"><br>
-          </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </fieldset>
+      <form name='contact' method="POST" data-netlify="true">
+        <fieldset class="outer">
+          <legend>Please feel free to send a message</legend>
+          <label>Email <br><input class="input-box" type="email"><br></label>
+          <label>Message<br><textarea name="massage"></textarea><br><br></label>
+    
+          <fieldset class="inner">
+            <legend>Reply?</legend>
+            <label class="container">Yes
+              <input type="radio" name="reply" value="yes" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">No
+              <input type="radio" name="reply" value="no">
+              <span class="checkmark"></span>
+            </label>
+          </fieldset>
+          <br><button type="submit" value="Send Message">Send Message</button>
+        </fieldset>
       </form>
-  </body>
+    </body>
 </html>
